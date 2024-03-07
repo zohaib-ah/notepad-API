@@ -22,7 +22,8 @@
 
 - **Standard Error Codes:** Use HTTP status codes to indicate the status of the request (e.g., 404 for not found, 400 for bad request).
   
-  `@GetMapping("/{id}")
+  `java
+  @GetMapping("/{id}")
     public ResponseEntity<Note> NoteById(@PathVariable Long id){
         Note note = noteServiceImp.getNoteById(id);
         return new ResponseEntity<>(note, HttpStatus.OK);
